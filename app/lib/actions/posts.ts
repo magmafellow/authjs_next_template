@@ -9,3 +9,7 @@ export async function createPosts() {
 
   console.log('Posts have been created')
 }
+
+export async function deletePosts() {
+  await db.delete(postsTable)
+}

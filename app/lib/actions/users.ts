@@ -9,3 +9,7 @@ export async function createUsers() {
 
   console.log('Users have been created')
 }
+
+export async function deleteUsers() {
+  await db.delete(usersTable)
+}
