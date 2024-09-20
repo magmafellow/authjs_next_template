@@ -1,5 +1,20 @@
 {
+<<<<<<< HEAD
   "node": {},
   "edge": {},
   "encryptionKey": "ZYAXf+QOFh4qXUwomzfbGLMawVMGgw678PlsC9I0qiM="
+=======
+  "node": {
+    "b55be63ca06b59c098e391b71f1788d3aee01f82": {
+      "workers": {
+        "app/login/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmagma%2FDesktop%2FImportant%2Fprojects%2Fauthjs_next_template%2Fapp%2Flib%2Factions%2Fauthenticate.ts%22%2C%5B%22login%22%5D%5D%5D&__client_imported__=true!"
+      },
+      "layer": {
+        "app/login/page": "action-browser"
+      }
+    }
+  },
+  "edge": {},
+  "encryptionKey": "/E/3cBixnIBS2T6w9Qe2HxTb4iRMOZZKmup5a5ua3TY="
+>>>>>>> 90aad8c0b273cc2ebbaaf7b608a35243ab465054
 }

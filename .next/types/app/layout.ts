@@ -1,4 +1,4 @@
-// File: C:\Users\magma\Desktop\Important\projects\authjs_next_template\app\layout.tsx
+// File: /Users/magma/Desktop/Important/projects/authjs_next_template/app/layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

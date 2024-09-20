@@ -11,6 +11,14 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
+<<<<<<< HEAD
+=======
+    "/login/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/login/page.js"
+    ],
+>>>>>>> 90aad8c0b273cc2ebbaaf7b608a35243ab465054
     "/profile/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
