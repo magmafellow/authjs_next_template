@@ -1,9 +1,6 @@
 {
-  "/page": "app/page.js",
-<<<<<<< HEAD
-=======
-  "/login/page": "app/login/page.js",
->>>>>>> 90aad8c0b273cc2ebbaaf7b608a35243ab465054
-  "/profile/page": "app/profile/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/seed/seed/page": "app/seed/seed/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/seed/seed/users/page": "app/seed/seed/users/page.js"
 }

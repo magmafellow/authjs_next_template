@@ -1,9 +1,5 @@
-import { pgTable, serial, text, varchar } from "drizzle-orm/pg-core";
-import { drizzle } from "drizzle-orm/node-postgres";
-import { Pool } from "pg";
+import { drizzle } from 'drizzle-orm/neon-http'
+import { neon } from '@neondatabase/serverless'
 
-const pool = new Pool({
-  connectionString: "postgres://postgres:mac7&@127.0.0.1:5432/authjs_next_template",
-});
-
-export const db = drizzle(pool);
+const sql = neon('postgresql://authjs_next_template_owner:z1mcb0YdgHPT@ep-cold-darkness-a25wvtyr.eu-central-1.aws.neon.tech/authjs_next_template?sslmode=require')
+export const db = drizzle(sql)

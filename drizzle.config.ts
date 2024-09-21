@@ -5,6 +5,6 @@ export default defineConfig({
   out: "./migrations",
   dialect: "postgresql",
   dbCredentials: {
-    url: "postgres://postgres:mac7&@127.0.0.1:5432/authjs_next_template",
+    url: "postgresql://authjs_next_template_owner:z1mcb0YdgHPT@ep-cold-darkness-a25wvtyr.eu-central-1.aws.neon.tech/authjs_next_template?sslmode=require",
   },
 });
