@@ -9,7 +9,10 @@ export default function LoginFormCredentials() {
 
   return (
     <form action={dispatch}>
-      <div>
+      <div className='text-center mb-3'>
+        <h2 className='text-gray-200 font-bold text-xl'>Login</h2>
+      </div>
+      <div className='mb-3'>
         <div>
           <label className="text-stone-300" htmlFor="email">
             email
@@ -17,14 +20,14 @@ export default function LoginFormCredentials() {
         </div>
         <div>
           <input
-            className="text-stone-800 px-2 py-0.5"
+            className="text-stone-800 px-2 py-0.5 rounded"
             type="text"
             id="email"
             name="email"
           />
         </div>
       </div>
-      <div className="mb-3">
+      <div className="mb-6">
         <div>
           <label className="text-stone-300" htmlFor="password">
             password
@@ -32,8 +35,8 @@ export default function LoginFormCredentials() {
         </div>
         <div>
           <input
-            className="text-stone-800 px-2 py-0.5"
-            type="text"
+            className="text-stone-800 px-2 py-0.5 rounded"
+            type="password"
             id="password"
             name="password"
           />
@@ -42,7 +45,7 @@ export default function LoginFormCredentials() {
       <div className="mb-3">
         <button
           type="submit"
-          className="w-full bg-green-800 hover:bg-green-700 text-green-50 py-0.5"
+          className="w-full bg-green-800 hover:bg-green-700 text-green-50 py-1 rounded font-medium"
         >
           login
         </button>

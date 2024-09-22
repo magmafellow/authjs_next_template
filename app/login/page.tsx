@@ -14,7 +14,7 @@ export default function Page() {
 
   return (
     <div className="min-h-screen flex flex-col gap-6 justify-center items-center">
-      <div className="flex gap-4 text-2xl">
+      <div className="flex absolute left-[50%] top-[27%] -translate-x-1/2 gap-6 text-4xl">
         <FaGithub
           className={clsx('cursor-pointer', {
             'text-sky-300': kind === 'github',

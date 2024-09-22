@@ -7,9 +7,9 @@ export default function LoginFormGithub() {
   return (
     <div>
       <button
-        className="bg-green-600 p-4"
-        onClick={() => {
-          login('github')
+        className="bg-stone-600 hover:bg-stone-700 font-medium rounded-xl p-4"
+        onClick={async () => {
+          await login('github')
         }}
       >
         Login Via Github
