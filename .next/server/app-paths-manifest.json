@@ -1,6 +1,3 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/seed/seed/page": "app/seed/seed/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/seed/seed/users/page": "app/seed/seed/users/page.js"
+  "/login/page": "app/login/page.js"
 }

@@ -11,3 +11,7 @@ export async function login(provider: string) {
 export async function logout() {
   return await signOut()
 }
+
+export async function loginCredentials(formData: FormData) {
+  await signIn('credentials', formData)
+}
