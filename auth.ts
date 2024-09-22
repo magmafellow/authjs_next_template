@@ -10,6 +10,7 @@ import {
 import Credentials from 'next-auth/providers/credentials'
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
+  pages: { signIn: '/login' },
   debug: true,
   providers: [
     Credentials({
@@ -18,26 +19,21 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         password: {},
       },
       authorize: async (credentials) => {
-        try {
-          console.log('at authorize cb')
-          let user = null
+        console.log('at authorize cb')
+        let user = null
 
-          user = await getUserByEmail(credentials.email as string)
+        user = await getUserByEmail(credentials.email as string)
 
-          // if (!user) {
-          //   throw new Error('User was not found.')
-          // }
+        // if (!user) {
+        //   throw new Error('User was not found.')
+        // }
 
-          console.log('at authorize end cb')
-          if (user?.password === credentials.password) {
-            console.log('authorize last if')
-            return user
-          } else {
-            console.log('authorize last else')
-            return null
-          }
-        } catch (error) {
-          console.log('authorize catch')
+        console.log('at authorize end cb')
+        if (user?.password === credentials.password) {
+          console.log('authorize last if')
+          return user
+        } else {
+          console.log('authorize last else')
           return null
         }
       },
