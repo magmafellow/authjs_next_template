@@ -1,6 +1,6 @@
 import { auth, signOut } from '@/auth'
 import Signout from '../ui/signout'
-import Link from 'next/link'
+import LinkMap from '../ui/link-map'
 
 export default async function Page() {
   const res = await auth()
@@ -25,14 +25,8 @@ export default async function Page() {
           </pre>
         </div>
       </div>
-      <div className='pt-10 text-center'>
-        {res && <Signout />}
-      </div>
-      <div className='w-[300px] font-medium pl-4 pt-4 items-start flex flex-col gap-4 h-[200px] bg-slate-700 absolute left-10 top-24 rounded'>
-        <Link className='hover:underline' href='/login'>Login</Link>
-        <Link className='hover:underline' href='/signup'>Signup</Link>
-        <Link className='hover:underline' href='/profile'>Profile</Link>
-      </div>
+      <div className="pt-10 text-center">{res && <Signout />}</div>
+      <LinkMap />
     </div>
   )
 }

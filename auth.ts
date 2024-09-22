@@ -19,21 +19,17 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         password: {},
       },
       authorize: async (credentials) => {
-        console.log('at authorize cb')
         let user = null
 
         user = await getUserByEmail(credentials.email as string)
 
-        // if (!user) {
-        //   throw new Error('User was not found.')
-        // }
+        if (!user) {
+          return null
+        }
 
-        console.log('at authorize end cb')
         if (user?.password === credentials.password) {
-          console.log('authorize last if')
           return user
         } else {
-          console.log('authorize last else')
           return null
         }
       },
@@ -42,7 +38,6 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   ],
   callbacks: {
     async jwt({ token, user, profile, account }) {
-      console.log('in jwt')
       if (user && account?.provider === 'github') {
         token.id = account!.provider + profile!.id
         const isUser = await isUserById(token.id as string)
@@ -50,17 +45,15 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
           const res = await registerGithubUser({
             id: token.id as string,
             email: user.email as string,
-            name: user.name as string,
+            username: user.name as string,
             password: 'github-password',
           })
         }
       }
       if (user && account?.provider === 'credentials') {
-        console.log(user)
-        console.log('credentials approach')
         const userDB = await getUserByEmail(user.email as string)
         token.id = userDB?.id
-
+        token.name = userDB?.username
         console.log(account)
         console.log(profile)
         console.log(token)
@@ -68,8 +61,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       return token
     },
     async session({ session, token }) {
-      console.log('in session')
       session.user.id = token.id as string
+      session.user.name = token.name
       return session
     },
   },

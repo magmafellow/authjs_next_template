@@ -1,14 +1,28 @@
 'use client'
 
-import { signIn } from '@/auth'
-import { loginCredentials } from '../lib/actions/authenticate'
-import { useFormState } from 'react-dom'
+import { useFormState } from "react-dom"
+import { signupCredentials } from "../lib/actions/authenticate"
 
-export default function LoginFormCredentials() {
-  const [message, dispatch] = useFormState(loginCredentials, undefined)
+export default function SignupFormCredentials() {
+  const [message, dispatch] = useFormState(signupCredentials, undefined)
 
   return (
     <form action={dispatch}>
+      <div>
+        <div>
+          <label className="text-stone-300" htmlFor="username">
+            username
+          </label>
+        </div>
+        <div>
+          <input
+            className="text-stone-800 px-2 py-0.5"
+            type="text"
+            id="username"
+            name="username"
+          />
+        </div>
+      </div>
       <div>
         <div>
           <label className="text-stone-300" htmlFor="email">
